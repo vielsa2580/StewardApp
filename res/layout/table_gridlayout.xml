@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:id="@+id/llHeaderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="14"
+        android:padding="2dip"
+        android:weightSum="10" >
+
+        <include layout="@layout/header" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="86"
+        android:padding="2dip"
+        android:weightSum="10" >
+
+        <ScrollView
+            android:id="@+id/svTableContainer"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:padding="2dip" >
+
+            <GridLayout
+                android:id="@+id/glTableDisp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:useDefaultMargins="true" >
+            </GridLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/llTableSideLayout"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/llTableBeforeJoin"
+                layout="@layout/table_before_join" />
+
+            <include
+                android:id="@+id/llTableDuringJoin"
+                layout="@layout/table_during_join" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.stewardimperial.presentors"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.stewardimperial.presentors.ACTFlashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ACTTableSelection"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="ACTLogin"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="ACTOrder"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="ACTTableGridLayout"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <service android:name="com.example.stewardimperial.socketprogramming.SRVReceiver" />
+
+        <receiver android:name="com.example.stewardimperial.broadcastreceivers.BROnBootup" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

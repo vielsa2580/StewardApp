@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="86" >
+
+        <include
+            android:id="@+id/llOrderPreviewViewLeft"
+            layout="@layout/orderpreview_view" />
+        
+         <include
+            android:id="@+id/llOrderPreviewBillLeft"
+            layout="@layout/orderpreview_bill" />
+         
+          <include
+            android:id="@+id/llOrderPreviewFeedbackLeft"
+            layout="@layout/orderpreview_feedback" />
+        
+          <include
+            android:id="@+id/llOrderPreviewEmptyLeft"
+            layout="@layout/orderpreview_empty" />
+          
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="14"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:id="@+id/llOrderPreviewView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="#D8D8D8"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/ivOrderPreviewViewIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/tvOrderPreviewView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="View Order"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOrderPreviewBill"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="#D8D8D8"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/ivOrderPreviewBillIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/tvOrderPreviewBill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Bill"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOrderPreviewFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="#D8D8D8"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/ivOrderPreviewFeedbackIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_drawer" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/tvOrderPreviewFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Feedback"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llOrderPreviewSendToKitchen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:background="#81F7BE"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/tvOrderPreviewSendToKitchen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Send to Kitchen"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
